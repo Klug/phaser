@@ -4,6 +4,7 @@ export default class Level2 extends Phaser.Scene {
 			key: 'Level2'
 		});
 	}
+
 	preload() {
 	    //IMAGE
 		this.load.image('star', '/assets/sprites/star.png');
@@ -16,12 +17,47 @@ export default class Level2 extends Phaser.Scene {
 	}
 
 	create() {
+		this.dude = this.add.sprite(100, 200, 'dude');
+
+		//INPUT
+		this.input.enabled = true;
+		this.wKey = this.input.keyboard.addKey('W');
+		this.aKey = this.input.keyboard.addKey('A');
+		this.sKey = this.input.keyboard.addKey('S');
+		this.dKey = this.input.keyboard.addKey('D');
+		this.spacebarKey = this.input.keyboard.addKey('SPACE');
+
+		//Pfeiltasten
+		this.cursorKeys = this.input.keyboard.createCursorKeys();
+
+		//console log good to see, whats inside
+		console.log(this.cursorKeys.up);
 
 	}
-	update(time, delta) {
 
-        //change Text constantly in update
-        // this.gameTitle.setText('Street Fighter ' + this.version);
-        // this.version += 1;
+	update(time, delta) {
+		if (this.dude.x >= 0 && this.dude.y >= 0) {
+			if (this.wKey.isDown || this.cursorKeys.up.isDown) {
+				this.dude.setY(this.dude.y - 2); //this.dude.y -> y position of 'dude'
+			}
+			if (this.sKey.isDown || this.cursorKeys.down.isDown) {
+				this.dude.setY(this.dude.y + 2);
+			}
+			if (this.aKey.isDown || this.cursorKeys.left.isDown) {
+				this.dude.setX(this.dude.x - 2); //this.dude.x -> x position of 'dude'
+			}
+			if (this.dKey.isDown || this.cursorKeys.right.isDown) {
+				this.dude.setX(this.dude.x + 2);
+			}
+
+			//just press it once
+			if (Phaser.Input.Keyboard.JustDown(this.spacebarKey)) {
+				this.dude.setY(this.dude.y - 50);
+			}
+
+		} else {
+			this.dude.setX(this.dude.x + 2);
+			this.dude.setY(this.dude.y + 2);
+		}
     }
 }
