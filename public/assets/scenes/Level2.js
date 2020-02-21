@@ -8,6 +8,7 @@ export default class Level2 extends Phaser.Scene {
 	preload() {
 	    //IMAGE
 		this.load.image('star', '/assets/sprites/star.png');
+		this.load.image('bomb', '/assets/sprites/bomb.png');
 
 		//SPRITESHEET (single)
 		this.load.spritesheet('dude', '/assets/sprites/dude.png', {
@@ -18,8 +19,8 @@ export default class Level2 extends Phaser.Scene {
 
 	create() {
 		// this.dude = this.add.sprite(100, 200, 'dude').setInteractive().setDepth(2);
-
 		// this.star = this.add.sprite(500, 200, 'star').setScale(8, 8).setInteractive().setDepth(1);
+		this.bomb = this.add.sprite(600, 300, 'bomb').setScale(3, 3).setInteractive();
 
 		//Keyboard INPUT
 		// this.input.enabled = true;
@@ -93,11 +94,11 @@ export default class Level2 extends Phaser.Scene {
 		// this.dude.body.setMass(25); //workaround
 
 		//add dude inline to Physics
-		this.player1 = this.physics.add.sprite(100, 300, 'dude').setScale(3,3).setOrigin(0, 0).setOffset(0, 8);
+		this.player1 = this.physics.add.sprite(200, 100, 'dude').setScale(3,3).setOrigin(0, 0).setOffset(0, 8);
 		this.player1.setSize(this.player1.body.width - 2, this.player1.body.height - 5, false);
 		// console.log(this.player1);
 
-		this.player2 = this.physics.add.sprite(200, 150, 'dude');
+		this.player2 = this.physics.add.sprite(50, 300, 'dude').setInteractive();
 
 		//World bound
 		this.physics.world.setBoundsCollision();
@@ -119,23 +120,39 @@ export default class Level2 extends Phaser.Scene {
 		// console.log(this.player1.body.blocked); //console log to see wich side is blocked
 		// console.log(this.player1.body.touching); //to see which side player2 is touching player1
 
+		//tweens
+		this.bomb.on('pointerdown', () => {
+			this.dudeAnimation();
+		});
+
+		this.player2.on('pointerdown', () => {
+			if(this.tween.isPlaying()){
+				this.tween.pause();
+			} else {
+				this.tween.resume();
+			}
+		});
+
+
+	}
+
+	dudeAnimation() {
 		//tweens => object animation from a to b like a bullet
-		var tween = this.tweens.add({
+		this.tween = this.tweens.add({
 			targets: this.player1,
-			x: 400, //'+=100'
-			y: 300, //'+=100'
+			x: 200, //'+=100'
+			y: '-=150', //'+=100'
 			// angle: 180, //rotate
 			// alpha: 0, //visibility
-			scaleX: 1,
-			scaleY: 1,
+			// scaleX: 1,
+			// scaleY: 1,
 			ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'...
-			duration: 2000,
+			duration: 1000,
 			repeat: -1, //or loop: -1
 			// delay: 2500,
 			yoyo: true
 		});
 	}
-
 	update(time, delta) {
 		//Keyboard
 		// if (this.dude.x >= 0 && this.dude.y >= 0) {
