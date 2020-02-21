@@ -17,9 +17,9 @@ export default class Level2 extends Phaser.Scene {
 	}
 
 	create() {
-		this.dude = this.add.sprite(100, 200, 'dude').setInteractive({draggable: true}).setDepth(2);
+		this.dude = this.add.sprite(100, 200, 'dude').setInteractive().setDepth(2);
 
-		this.star = this.add.sprite(500, 200, 'star').setScale(8, 8).setInteractive({dropZone: true}).setDepth(1);
+		this.star = this.add.sprite(500, 200, 'star').setScale(8, 8).setInteractive().setDepth(1);
 
 		//Keyboard INPUT
 		// this.input.enabled = true;
@@ -33,6 +33,7 @@ export default class Level2 extends Phaser.Scene {
 		// this.cursorKeys = this.input.keyboard.createCursorKeys();
 
 		//Mouse
+		//disable right click
 		this.input.mouse.disableContextMenu();
 
 		//listener on every mouseclick
@@ -60,31 +61,43 @@ export default class Level2 extends Phaser.Scene {
 		// });
 
 		// 'dude' drag and drop
-		this.dude.on('dragstart', (pointer, dragX, dragY) => {
-			console.log('Drag start');
-		});
+		// this.dude.on('dragstart', (pointer, dragX, dragY) => {
+		// 	console.log('Drag start');
+		// });
+		//
+		// this.dude.on('drag', (pointer, dragX, dragY) => {
+		// 	console.log('Drag atm');
+		// 	this.dude.setX(dragX);
+		// 	this.dude.setY(dragY);
+		// });
+		// this.dude.on('dragend', (pointer, dragX, dragY) => {
+		// 	console.log('Drag end');
+		// });
 
-		this.dude.on('drag', (pointer, dragX, dragY) => {
-			console.log('Drag atm');
-			this.dude.setX(dragX);
-			this.dude.setY(dragY);
-		});
-		this.dude.on('dragend', (pointer, dragX, dragY) => {
-			console.log('Drag end');
-		});
+		//dragzone on Star
+		// this.input.on('dragenter', (pointer, gameObject, dropZone) => {
+		// 	dropZone.setTint(0x00FF00);
+		// });
+		// this.input.on('dragleave', (pointer, gameObject, dropZone) => {
+		// 	dropZone.clearTint();
+		// });
+		// this.input.on('drop', (pointer, gameObject, dropZone) => {
+		// 	gameObject.x = dropZone.x;
+		// 	gameObject.y = dropZone.y;
+		// 	dropZone.clearTint();
+		// });
 
-		//Dragzone on Star
-		this.input.on('dragenter', (pointer, gameObject, dropZone) => {
-			dropZone.setTint(0x00FF00);
-		});
-		this.input.on('dragleave', (pointer, gameObject, dropZone) => {
-			dropZone.clearTint();
-		});
-		this.input.on('drop', (pointer, gameObject, dropZone) => {
-			gameObject.x = dropZone.x;
-			gameObject.y = dropZone.y;
-			dropZone.clearTint();
-		});
+		//Physics
+		//add sprite to physics
+		// this.physics.add.existing(this.dude, 0); //1=static; 0=dynamic(react to world) -> contra not working with setMass
+		// this.dude.body.setMass(25); //workaround
+
+		this.player1 = this.physics.add.sprite(100, 0, 'dude').setScale(3,3).setOrigin(0, 0).setOffset(0, 8);
+		this.player1.setSize(this.player1.body.width - 2, this.player1.body.height - 5, false);
+		console.log(this.player1);
+
+		this.player2 = this.physics.add.sprite(250, 0, 'dude');
+		this.player2.setMass(25);
 	}
 
 	update(time, delta) {

@@ -16,7 +16,7 @@ var config = {
 	physics: {
 		default: 'arcade',
 		arcade: {
-			debug: true,
+			debug: true, // true sets borders around physics sprites. False truns it off
 			gravity: {
 				y: 500
 			}
