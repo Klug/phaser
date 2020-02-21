@@ -17,7 +17,7 @@ export default class Level2 extends Phaser.Scene {
 	}
 
 	create() {
-		this.dude = this.add.sprite(100, 200, 'dude').setInteractive().setDepth(2);
+		// this.dude = this.add.sprite(100, 200, 'dude').setInteractive().setDepth(2);
 
 		this.star = this.add.sprite(500, 200, 'star').setScale(8, 8).setInteractive().setDepth(1);
 
@@ -98,6 +98,11 @@ export default class Level2 extends Phaser.Scene {
 
 		this.player2 = this.physics.add.sprite(250, 0, 'dude');
 		this.player2.setMass(25);
+
+		//World bound
+		this.physics.world.setBoundsCollision();
+		this.player1.setCollideWorldBounds(true); //hold player 1 ingame
+		this.physics.world.setBounds(300, 0, 400, 300);
 	}
 
 	update(time, delta) {
