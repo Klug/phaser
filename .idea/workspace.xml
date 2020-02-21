@@ -21,15 +21,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/scenes/Level2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+            <state relative-caret-position="310">
+              <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
               <folding>
-                <element signature="e#386#402#0" />
-                <element signature="e#699#712#0" />
-                <element signature="e#833#863#0" />
-                <element signature="e#1259#1291#0" />
-                <element signature="e#1392#1434#0" />
-                <element signature="e#1013#1023#0" />
+                <element signature="e#341#357#0" />
+                <element signature="e#654#667#0" />
+                <element signature="e#786#816#0" />
+                <element signature="e#1180#1212#0" />
+                <element signature="e#1313#1355#0" />
+                <element signature="e#1826#1836#0" />
               </folding>
             </state>
           </provider>
@@ -69,10 +69,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="128" />
-    <option name="width" value="1440" />
-    <option name="height" value="773" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -80,6 +80,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,13 +117,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/scenes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../caDigitPV" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -179,10 +179,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20671141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -198,7 +198,7 @@
       <window_info anchor="bottom" x="3148" y="140" width="595" height="592" id="Version Control" maximized="true" order="8" type="WINDOWED" weight="0.32988507" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="1942" y="376" width="1876" height="287" id="Terminal" order="11" visible="true" weight="0.14548239" />
+      <window_info anchor="bottom" x="1942" y="376" width="1876" height="287" id="Terminal" order="11" visible="true" weight="0.18735632" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -213,6 +213,10 @@
         <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/controllers/stripe.server.controller.js.map" />
         <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/routes/stripe.server.routes.js.map" />
         <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/routes/stripe.server.routes.js" />
+        <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/controllers/stripe.server.controller.js.map" />
+        <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/controllers/stripe.server.controller.js" />
+        <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/routes/stripe.server.routes.js" />
+        <option value="$PROJECT_DIR$/../../../../caDigitPV/pv/app/routes/stripe.server.routes.js.map" />
       </list>
     </option>
   </component>
@@ -319,15 +323,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/scenes/Level2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+        <state relative-caret-position="310">
+          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
           <folding>
-            <element signature="e#386#402#0" />
-            <element signature="e#699#712#0" />
-            <element signature="e#833#863#0" />
-            <element signature="e#1259#1291#0" />
-            <element signature="e#1392#1434#0" />
-            <element signature="e#1013#1023#0" />
+            <element signature="e#341#357#0" />
+            <element signature="e#654#667#0" />
+            <element signature="e#786#816#0" />
+            <element signature="e#1180#1212#0" />
+            <element signature="e#1313#1355#0" />
+            <element signature="e#1826#1836#0" />
           </folding>
         </state>
       </provider>

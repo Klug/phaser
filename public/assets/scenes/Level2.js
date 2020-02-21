@@ -17,7 +17,9 @@ export default class Level2 extends Phaser.Scene {
 	}
 
 	create() {
-		this.dude = this.add.sprite(100, 200, 'dude').setInteractive();
+		this.dude = this.add.sprite(100, 200, 'dude').setInteractive({draggable: true}).setDepth(2);
+
+		this.star = this.add.sprite(500, 200, 'star').setScale(8, 8).setInteractive({dropZone: true}).setDepth(1);
 
 		//Keyboard INPUT
 		// this.input.enabled = true;
@@ -33,7 +35,7 @@ export default class Level2 extends Phaser.Scene {
 		//Mouse
 		this.input.mouse.disableContextMenu();
 
-		//listiner on every mouseclick
+		//listener on every mouseclick
 		// this.input.on('pointerdown', pointer => {
 		// 	if(pointer.rightButtonDown()){
 		// 		this.dude.setX(pointer.y);
@@ -57,7 +59,32 @@ export default class Level2 extends Phaser.Scene {
 		// 	// this.dude.setX(this.dude.x + 50);
 		// });
 
+		// 'dude' drag and drop
+		this.dude.on('dragstart', (pointer, dragX, dragY) => {
+			console.log('Drag start');
+		});
 
+		this.dude.on('drag', (pointer, dragX, dragY) => {
+			console.log('Drag atm');
+			this.dude.setX(dragX);
+			this.dude.setY(dragY);
+		});
+		this.dude.on('dragend', (pointer, dragX, dragY) => {
+			console.log('Drag end');
+		});
+
+		//Dragzone on Star
+		this.input.on('dragenter', (pointer, gameObject, dropZone) => {
+			dropZone.setTint(0x00FF00);
+		});
+		this.input.on('dragleave', (pointer, gameObject, dropZone) => {
+			dropZone.clearTint();
+		});
+		this.input.on('drop', (pointer, gameObject, dropZone) => {
+			gameObject.x = dropZone.x;
+			gameObject.y = dropZone.y;
+			dropZone.clearTint();
+		});
 	}
 
 	update(time, delta) {
