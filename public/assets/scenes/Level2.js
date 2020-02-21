@@ -124,9 +124,14 @@ export default class Level2 extends Phaser.Scene {
 			targets: this.player1,
 			x: 400, //'+=100'
 			y: 300, //'+=100'
+			// angle: 180, //rotate
+			// alpha: 0, //visibility
+			scaleX: 1,
+			scaleY: 1,
 			ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'...
 			duration: 2000,
-			repeat: -1,
+			repeat: -1, //or loop: -1
+			// delay: 2500,
 			yoyo: true
 		});
 	}
