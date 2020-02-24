@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c5ea38-2348-4c9f-849a-5969f69ebd29" name="Default Changelist" comment="Secure issues fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/scenes/Level2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scenes/Level2.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,21 +21,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/scenes/Level2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="100" column="80" selection-start-line="100" selection-start-column="80" selection-end-line="100" selection-end-column="80" />
+            <state relative-caret-position="338">
+              <caret line="167" column="20" lean-forward="true" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
               <folding>
-                <element signature="e#341#357#0" />
-                <element signature="e#654#667#0" />
-                <element signature="e#786#816#0" />
-                <element signature="e#1180#1212#0" />
-                <element signature="e#1313#1355#0" />
-                <element signature="e#1653#1676#0" />
-                <element signature="e#2038#2056#0" />
-                <element signature="e#3202#3235#0" />
-                <element signature="e#3364#3387#0" />
-                <element signature="e#1826#1836#0" />
-                <element signature="e#4211#4271#0" />
-                <element signature="e#4529#4563#0" />
+                <element signature="e#650#666#0" />
+                <element signature="e#963#976#0" />
+                <element signature="e#1043#1050#0" />
+                <element signature="e#1119#1149#0" />
+                <element signature="e#1513#1545#0" />
+                <element signature="e#1646#1688#0" />
+                <element signature="e#1785#1808#0" />
+                <element signature="e#2170#2188#0" />
+                <element signature="e#2577#2586#0" />
+                <element signature="e#3402#3435#0" />
+                <element signature="e#3552#3575#0" />
+                <element signature="e#4161#4215#0" />
+                <element signature="e#5039#5049#0" />
+                <element signature="e#5850#5910#0" />
+                <element signature="e#6011#6045#0" />
               </folding>
             </state>
           </provider>
@@ -43,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="448">
               <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
               <folding>
                 <element signature="e#43#81#0" expanded="true" />
@@ -122,14 +126,14 @@
               <item name="first-game" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="audio" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="first-game" type="b2602c69:ProjectViewProjectNode" />
               <item name="first-game" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="tiles" type="462c0819:PsiDirectoryNode" />
+              <item name="sprites" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,14 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580824401140</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Shoeboxkid sprites and animation">
+      <created>1582539807993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582539807994</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17430703" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -216,7 +227,7 @@
       <window_info anchor="bottom" x="3148" y="140" width="595" height="592" id="Version Control" maximized="true" order="8" type="WINDOWED" weight="0.32988507" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="1942" y="376" width="1876" height="287" id="Terminal" order="11" visible="true" weight="0.18735632" />
+      <window_info anchor="bottom" x="1942" y="376" width="1876" height="287" id="Terminal" order="11" visible="true" weight="0.18735632" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -258,7 +269,8 @@
     <MESSAGE value="changed readme. Dont need to be so much." />
     <MESSAGE value="Secure issues fixed" />
     <MESSAGE value="add animation spritesheet 'dude' and made it run to the left" />
-    <option name="LAST_COMMIT_MESSAGE" value="add animation spritesheet 'dude' and made it run to the left" />
+    <MESSAGE value="Shoeboxkid sprites and animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shoeboxkid sprites and animation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/img/logo.png" />
@@ -332,33 +344,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/index.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/scenes/Level2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+        <state relative-caret-position="338">
+          <caret line="167" column="20" lean-forward="true" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
           <folding>
-            <element signature="e#43#81#0" expanded="true" />
+            <element signature="e#650#666#0" />
+            <element signature="e#963#976#0" />
+            <element signature="e#1043#1050#0" />
+            <element signature="e#1119#1149#0" />
+            <element signature="e#1513#1545#0" />
+            <element signature="e#1646#1688#0" />
+            <element signature="e#1785#1808#0" />
+            <element signature="e#2170#2188#0" />
+            <element signature="e#2577#2586#0" />
+            <element signature="e#3402#3435#0" />
+            <element signature="e#3552#3575#0" />
+            <element signature="e#4161#4215#0" />
+            <element signature="e#5039#5049#0" />
+            <element signature="e#5850#5910#0" />
+            <element signature="e#6011#6045#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/scenes/Level2.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="100" column="80" selection-start-line="100" selection-start-column="80" selection-end-line="100" selection-end-column="80" />
+        <state relative-caret-position="448">
+          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
           <folding>
-            <element signature="e#341#357#0" />
-            <element signature="e#654#667#0" />
-            <element signature="e#786#816#0" />
-            <element signature="e#1180#1212#0" />
-            <element signature="e#1313#1355#0" />
-            <element signature="e#1653#1676#0" />
-            <element signature="e#2038#2056#0" />
-            <element signature="e#3202#3235#0" />
-            <element signature="e#3364#3387#0" />
-            <element signature="e#1826#1836#0" />
-            <element signature="e#4211#4271#0" />
-            <element signature="e#4529#4563#0" />
+            <element signature="e#43#81#0" expanded="true" />
           </folding>
         </state>
       </provider>

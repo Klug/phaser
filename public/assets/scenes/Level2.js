@@ -16,7 +16,12 @@ export default class Level2 extends Phaser.Scene {
 			frameHeight: 48
 		});
 
+		//Shoeboxkid
 		this.load.atlas('shoeboxkid', '/assets/sprites/shoeboxkid/shoeboxkid.png', '/assets/sprites/shoeboxkid/shoeboxkid.json');
+
+		//Audio
+		this.load.audio('bgmusic', ['/assets/audio/first-audio.ogg']);
+		this.load.audio('coinsound', ['/assets/audio/sfx_coin_double4.wav']);
 
 	}
 
@@ -152,6 +157,18 @@ export default class Level2 extends Phaser.Scene {
 		});
 		this.kid.play('walk');
 
+		//Audio
+		this.bgmusic = this.sound.add('bgmusic', {
+			mute: false,
+			volume: 1,
+			rate: 0,
+			detune: 1100,
+			seec: 30,
+			loop: true,
+			delay: 0
+		});
+		 //this.bgmusic. = play, stop, pause, resume, setMute(true), setVolume(0-1), setDetune(-100--1000)=>slower, setLoop(true)
+		// this.bgmusic.play();
 	}
 
 	dudeAnimation() {
