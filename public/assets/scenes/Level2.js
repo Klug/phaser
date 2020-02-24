@@ -15,6 +15,9 @@ export default class Level2 extends Phaser.Scene {
 			frameWidth: 32,
 			frameHeight: 48
 		});
+
+		this.load.atlas('shoeboxkid', '/assets/sprites/shoeboxkid/shoeboxkid.png', '/assets/sprites/shoeboxkid/shoeboxkid.json');
+
 	}
 
 	create() {
@@ -133,24 +136,70 @@ export default class Level2 extends Phaser.Scene {
 			}
 		});
 
+		//shoeboxkid
+		this.kid = this.add.sprite(300, 150, 'shoeboxkid', 'shoeboxkid_01.png').setScale(4);
+		this.anims.create({
+			key: 'walk',
+			repeat: -1,
+			frameRate: 10,
+			frames: this.anims.generateFrameNames('shoeboxkid',{
+				prefix: 'shoeboxkid_run',
+				suffix: '.png',
+				start: 1,
+				end: 3,
+				zeroPad: 2
+			})
+		});
+		this.kid.play('walk');
 
 	}
 
 	dudeAnimation() {
 		//tweens => object animation from a to b like a bullet
-		this.tween = this.tweens.add({
+		// this.tween = this.tweens.add({
+		// 	targets: this.player1,
+		// 	x: 200, //'+=100'
+		// 	y: '-=150', //'+=100'
+		// 	// angle: 180, //rotate
+		// 	// alpha: 0, //visibility
+		// 	// scaleX: 1,
+		// 	// scaleY: 1,
+		// 	ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'...
+		// 	duration: 1000,
+		// 	repeat: -1, //or loop: -1
+		// 	// delay: 2500,
+		// 	yoyo: true
+		// });
+
+		this.player1Timeline = this.tweens.timeline({
 			targets: this.player1,
-			x: 200, //'+=100'
-			y: '-=150', //'+=100'
-			// angle: 180, //rotate
-			// alpha: 0, //visibility
-			// scaleX: 1,
-			// scaleY: 1,
-			ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'...
+			ease: 'Linear',
 			duration: 1000,
-			repeat: -1, //or loop: -1
-			// delay: 2500,
-			yoyo: true
+			loop: 0,
+			tweens: [
+				{
+					targets: this.player1,
+					x: 0,
+					y: 0,
+					duration: 5000,
+				},
+				{
+					targets: this.player1,
+					x: 600,
+					y: 0,
+				},
+				{
+					targets: this.player1,
+					x: 600,
+					y: 300,
+				},
+				{
+					targets: this.player1,
+					x: 0,
+					y: 300,
+				},
+
+			]
 		});
 	}
 	update(time, delta) {
@@ -182,7 +231,7 @@ export default class Level2 extends Phaser.Scene {
 		// 	console.log('DIED');
 		// }
 
-		//check if player2 fell on palyer1
+		//check if player2 fell on player1
 		// if(this.player1.body.touching.up) {
 		// 	console.log('player2 fell on player1');
 		// }
